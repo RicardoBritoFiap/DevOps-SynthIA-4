@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layout/base}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes da Tarefa</title>
+</head>
+
+<body>
+    <div layout:fragment="conteudo">
+        <h1>Detalhes da Tarefa</h1>
+        <p><strong>ID:</strong> <span th:text="${tarefa.id}"></span></p>
+        <p><strong>Título:</strong> <span th:text="${tarefa.titulo}"></span></p>
+        <p><strong>Descrição:</strong> <span th:text="${tarefa.descricao}"></span></p>
+        <p><strong>Status:</strong> <span th:text="${tarefa.status}"></span></p>
+        <a th:href="@{/tarefas}" class="btn btn-primary">Voltar</a>
+    </div>
+</body>
+
+</html>

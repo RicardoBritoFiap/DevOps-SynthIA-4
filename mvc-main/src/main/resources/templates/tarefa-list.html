@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout/base}"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista de Tarefas</title>
+    <style>
+      #table-actions {
+        gap: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div layout:fragment="conteudo">
+      <h1>Lista de Tarefas</h1>
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Descrição</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="tarefa : ${tarefas}">
+            <td th:text="${tarefa.id}"></td>
+            <td th:text="${tarefa.titulo}"></td>
+            <td th:text="${tarefa.descricao}"></td>
+            <td th:text="${tarefa.status}"></td>
+            <td id="table-actions" class="">
+              <a
+                class="btn btn-primary"
+                th:href="@{/tarefas/detalhes/{id}(id=${tarefa.id})}"
+                >Detalhes</a
+              >
+              <a
+                class="btn btn-warning"
+                th:href="@{/tarefas/editar/{id}(id=${tarefa.id})}"
+                >Editar</a
+              >
+              <a
+                class="btn btn-danger"
+                th:href="@{/tarefas/excluir/{id}(id=${tarefa.id})}"
+                >Excluir</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
