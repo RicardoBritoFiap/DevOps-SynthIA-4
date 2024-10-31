@@ -27,7 +27,7 @@ jobs:
           java-version: '22'
 
       - name: Build with Maven
-        run: mvn clean package
+        run: -f SynthAPI/pom.xml
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3 
