@@ -1,20 +1,28 @@
 package com.RicardoBritoFiap.SynthAPI.model;
 
 import org.hibernate.validator.constraints.br.CPF;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Cliente {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cliente_seq_gen")
+    @SequenceGenerator(name = "cliente_seq_gen", sequenceName = "cliente_seq", allocationSize = 1)
     private Long id;
 
     @CPF
@@ -31,7 +39,4 @@ public class Cliente {
 
     @NotBlank
     private String modelo;
-
-    @ManyToOne
-    private Empresa empresa;
 }
