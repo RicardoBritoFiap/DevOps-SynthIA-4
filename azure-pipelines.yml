@@ -12,15 +12,15 @@ pool:
 steps:
 - task: JavaToolInstaller@0
   inputs:
-    versionSpec: '22'             # Especifica o JDK 22
-    jdkArchitectureOption: 'x64'   # Arquitetura x64
+    versionSpec: '17'             
+    jdkArchitectureOption: 'x64'   
     jdkSourceOption: 'AzureStorage'
 
 - task: Maven@3
   inputs:
     mavenPomFile: 'SynthAPI/pom.xml'
     mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'Path'         # Usa o caminho do JDK instalado pelo Java Tool Installer
+    javaHomeOption: 'Path'         
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
