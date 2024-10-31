@@ -29,6 +29,7 @@ Esse repoitorio não possue toda a nossa aplicação, trata-se de uma parte mais
   <img src="./Images/Captura de tela 2024-10-31 061256.png">
 - Feito isso, rode a API precionanndo a tecla F5. E interrompa o seu funcionamento precionando Alt+F5.
 - Para realizar os testes dos Endpoints da API, acesse o link abaixo com a API rodando para ser direcionado para o Swagger.
+- 
 
 # [📋Endpoints da API](http://localhost:8080/swagger-ui/index.html#/) #
 
