@@ -10,17 +10,12 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '17'             
-    jdkArchitectureOption: 'x64'   
-    jdkSourceOption: 'AzureStorage'
-
 - task: Maven@3
   inputs:
     mavenPomFile: 'SynthAPI/pom.xml'
     mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'Path'         
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.17'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
