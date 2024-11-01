@@ -35,10 +35,11 @@ Esse repoitorio não possue toda a nossa aplicação, trata-se de uma parte mais
 
 ### *Os endpoints e requisições da API podem ser acessadas rodando a API e utilizando o link abaixo* ###
 http://localhost:8080/swagger-ui/index.html#/
+https://synthia-gffahyerdzfqbzay.brazilsouth-01.azurewebsites.net/swagger-ui/index.html#/
 
 
 # 🌐Como Subir a aplicação! #
 
+## *Detalhes de como subir a aplicação estarão no video* ##
 
-
-## [🎬Link do vídeo]() ##
+### [🎬Link do vídeo]() ###
