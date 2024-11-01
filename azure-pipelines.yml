@@ -30,10 +30,10 @@ steps:
   condition: succeededOrFailed()
 
 - task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
   inputs:
-    pathToPublish: 'SynthAPI/target/*.jar'
-    artifactName: 'java-app'
-    publishLocation: 'Container'
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+  condition: succeededOrFailed()
 
 - task: AzureRmWebAppDeployment@4
   inputs:
@@ -41,4 +41,4 @@ steps:
     azureSubscription: 'Azure for Students (6b3f65f8-c627-4389-9b18-4e2623914819)'
     appType: 'webApp'
     WebAppName: 'SynthIA'
-    package: '$(System.DefaultWorkingDirectory)/_java-app/*.jar'
+    package: '$(System.DefaultWorkingDirectory)/java-app/*.jar'
