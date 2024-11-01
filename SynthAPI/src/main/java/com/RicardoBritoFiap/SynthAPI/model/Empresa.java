@@ -1,6 +1,5 @@
 package com.RicardoBritoFiap.SynthAPI.model;
 
-import org.hibernate.validator.constraints.br.CNPJ;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,7 +7,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -27,7 +25,7 @@ public class Empresa {
     @SequenceGenerator(name = "empresa_seq_gen", sequenceName = "empresa_seq", allocationSize = 1)
     private Long id;
 
-    @CNPJ
+    @NotBlank
     private String cnpj;
 
     @NotBlank
@@ -36,7 +34,7 @@ public class Empresa {
     @NotBlank
     private String endereço;
 
-    @Email
+    @NotBlank
     private String email;
 
     @OneToOne
