@@ -41,4 +41,4 @@ steps:
     azureSubscription: 'Azure for Students (6b3f65f8-c627-4389-9b18-4e2623914819)'
     appType: 'webApp'
     WebAppName: 'SynthIA'
-    package: 'D:\a\1\s\target\*.jar'
+    package: '$(build.artifactstagingdirectory)/target/SynthIA.jar'
