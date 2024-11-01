@@ -31,7 +31,7 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(System.DefaultWorkingDirectory)target\java-app.jar'
+    pathToPublish: 'SynthAPI/target/*.jar'
     artifactName: 'java-app'
     publishLocation: 'Container'
 
@@ -42,3 +42,8 @@ steps:
     appType: 'webApp'
     WebAppName: 'SynthIA'
     package: '$(System.DefaultWorkingDirectory)/_java-app/*.jar'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: 'SynthAPI/target/*.jar'
+    artifactName: 'java-app'
