@@ -21,13 +21,25 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'clean package'
 
+- script: |
+    echo "Listing files in target directory:"
+    dir "$(System.DefaultWorkingDirectory)/SynthAPI/target"
+  displayName: 'Check target directory for JAR'
+
+
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
   inputs:
-    SourceFolder: '$(system.defaultworkingdirectory)'
-    Contents: '**/*.jar'
+    SourceFolder: '$(system.defaultworkingdirectory)/SynthAPI/target'
+    Contents: '*.jar'
     TargetFolder: '$(build.artifactstagingdirectory)'
   condition: succeededOrFailed()
+
+- script: |
+    echo "Listing files in artifact staging directory:"
+    dir "$(build.artifactstagingdirectory)"
+  displayName: 'Check artifact staging directory for JAR'
+
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
@@ -40,5 +52,5 @@ steps:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Azure for Students (6b3f65f8-c627-4389-9b18-4e2623914819)'
     appType: 'webApp'
-    WebAppName: 'java-app'
-    package: '$(build.artifactstagingdirectory)/target/java-app.jar'
+    WebAppName: 'SynthIA'
+    package: '$(build.artifactstagingdirectory)/*.jar'
