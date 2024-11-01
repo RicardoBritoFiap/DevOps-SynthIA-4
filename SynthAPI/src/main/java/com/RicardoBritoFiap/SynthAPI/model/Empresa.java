@@ -32,7 +32,7 @@ public class Empresa {
     private String nome;
 
     @NotBlank
-    private String endereço;
+    private String endereco;
 
     @NotBlank
     private String email;

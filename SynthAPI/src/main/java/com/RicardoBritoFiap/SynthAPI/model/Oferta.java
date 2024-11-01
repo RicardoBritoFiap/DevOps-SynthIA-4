@@ -28,7 +28,7 @@ public class Oferta {
     private String desconto;
 
     @NotBlank
-    private String porcetagem;
+    private String porcentagem;
 
     @OneToOne
     @JoinColumn(name = "venda_id")
