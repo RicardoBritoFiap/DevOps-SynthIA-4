@@ -30,15 +30,15 @@ steps:
   condition: succeededOrFailed()
 
 - task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: drop'
   inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-  condition: succeededOrFailed()
+    pathtoPublish: '$(System.DefaultWorkingDirectory)target\java-app.jar'
+    artifactName: 'java-app'
+    publishLocation: 'Container'
 
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Azure for Students (6b3f65f8-c627-4389-9b18-4e2623914819)'
     appType: 'webApp'
-    WebAppName: 'Sprint4'
+    WebAppName: 'SynthIA'
     package: '$(System.DefaultWorkingDirectory)/_java-app/*.jar'
