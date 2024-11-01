@@ -40,5 +40,5 @@ steps:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Azure for Students (6b3f65f8-c627-4389-9b18-4e2623914819)'
     appType: 'webApp'
-    WebAppName: 'SynthIA'
+    WebAppName: 'java-app'
     package: '$(build.artifactstagingdirectory)/target/java-app.jar'
