@@ -1,7 +1,7 @@
 # ☁️SynthAI DevOps #
 Esse repositório é responsavel pela parte de arquitetura de dados em nuvem atraves da Azure DevOps para a matéria de DEVOPS TOOLS & CLOUD COMPUTING.
 
-Esse repoitorio não possue toda a nossa aplicação, trata-se de uma parte mais básica da implementação da nossa matéria de JAVA ADVANCED. Utilizamos o Spring Boot para fazer uma API responsavel pelo fluxo de dados da parte de "Aproveitamento das Oportunidades de Vendas" da nossa aplicação, que analisa os dados dos clientes e utiliza algoritmos de recomendação para identificar oportunidades de venda cruzadas e adicionais. Dessa forma, são oferecidos produtos ou serviços extras que atendam às necessidades e preferências individuais de cada cliente. Assim sendo possivel a realização dos testes de persistencia de dados da pipeline realizada na plataforma Azure DevOps.
+Esse repositório não possui toda a nossa aplicação, trata-se de uma parte mais básica da implementação da nossa matéria de JAVA ADVANCED. Utilizamos o Spring Boot para fazer uma API responsável pelo fluxo de dados da parte de "Aproveitamento das Oportunidades de Vendas" da nossa aplicação, que analisa os dados dos clientes e utiliza algoritmos de recomendação para identificar oportunidades de venda cruzadas e adicionais. Dessa forma, são oferecidos produtos ou serviços extras que atendam às necessidades e preferências individuais de cada cliente. Assim sendo possível a realização dos testes de persistência de dados da pipeline realizada na plataforma Azure DevOps.
 
 👥 **Integrantes do Grupo:**
 
